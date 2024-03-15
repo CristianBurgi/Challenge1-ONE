@@ -101,11 +101,12 @@ section {
 
 .seccion2 {  
     background-color: #ffffff;
-    width: 20%; 
+    width: 30%; 
     border-radius: 32px;
-    
+    height: 80%;
     box-sizing: border-box;
     overflow: hidden; 
+    margin-right: 30px;
 }
 .seccion2:hover{
     box-shadow: 0 5px 35px 0px rgba(0,0,0,.2);   
@@ -114,7 +115,7 @@ section {
 .contenedor-munieco {
     width: 100%;
     height: 60%;
-    padding-top: 150px;
+    padding-top: 12em;
     box-sizing: border-box;
     overflow: hidden;
   
@@ -133,7 +134,7 @@ section {
 }
 
 .contenedor-resultado {
-    width: 100%;
+    width: 80%;
     height: 85%;
     padding: 25px;
     box-sizing: border-box;
@@ -170,7 +171,7 @@ section {
 footer {
     width: 100%;
     height: 50px;
-
+    margin-top: 10px;
     text-align: center;
 }
 

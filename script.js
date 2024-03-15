@@ -72,21 +72,18 @@ function ocultarElementos(){
 function encriptarTexto(mensaje) {
     var texto = mensaje;
     var textoFinal = "";
-
+    var hasAccent = true;
     for (var i = 0; i < texto.length; i++) {
         var char = texto[i];
 
-        // Verificar si el carácter es mayúscula
-        if (char.toUpperCase() === char) {
-            console.error("Error: El carácter '" + char + "' es mayúscula.");
-            window.alert("Error: El carácter '" + char + "' es mayúscula.");
+        if (char === char.toUpperCase() || /[àáâãäåèéêëìíîïòóôõöùúûü]/i.test(char)) {
+            console.error("Error: El carácter '" + char + "' es mayúscula o tiene acento.");
+            window.alert("Error: El carácter '" + char + "' es mayúscula o tiene acento.");
             return null; // Otra opción sería lanzar una excepción
+            // Aquí puedes lanzar un alert o manejar el error de otra manera
         }
-
-       /* // Eliminar acentos
-        var normalizedChar = unicodedata.normalize("NFD", char);
-        var asciiChar = normalizedChar.encode("ascii", "ignore").decode("utf-8");
-        */
+        
+       
         // Reemplazar según las reglas
         if (char === "a") {
             textoFinal += "ai";
