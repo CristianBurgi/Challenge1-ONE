@@ -1,6 +1,7 @@
 var botonEncriptar = document.querySelector(".btn-encriptar");
 var botonDesencriptar = document.querySelector(".btn-desencriptar");
 var botonCopiar = document.querySelector(".btn-copiar");
+var botonLimpiar=document.querySelector(".btn-limpiar");
 let munieco = document.querySelector(".contenedor-munieco");
 let h3 = document.querySelector(".contenedor-h3");
 let parrafo = document.querySelector(".contenedor-parrafo");
@@ -10,6 +11,7 @@ let area = document.querySelector(".area");
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
 botonCopiar.onclick = copiarTexto;
+botonLimpiar.onclick= limpiarTexto;
 
 function encriptar(){
    ocultarElementos();
@@ -22,17 +24,30 @@ function desencriptar(){
 
 }
 function copiarTexto() {
-    /*var area = document.querySelector(".area");
-    var resultado = document.querySelector(".texto-resultado"); // Asegúrate de que el elemento resultado tenga un id="resultado"
-    
-    // Copia el valor del elemento resultado al área de texto*/
+   
+
+    // Copia el valor del elemento resultado al área de texto
     area.value = resultado.textContent;
-    window.alert("Mensaje Copiado con éxito.");
+
+    // Copiar el texto al portapapeles
+    navigator.clipboard.writeText(resultado.textContent)
+        .then(() => {
+            // Mostrar un mensaje de éxito
+            window.alert("Texto copiado al portapapeles.");
+        })
+        .catch(err => {
+            console.error('Error al copiar el texto: ', err);
+        });
 }
 
 function recuperarTexto(){
     var area = document.querySelector(".area");
     return area.value;
+}
+function limpiarTexto(){
+    resultado.textContent = "";
+    area.value = "";
+    mostrarElementos();
 }
 
 
@@ -40,6 +55,11 @@ function ocultarElementos(){
     munieco.classList.add("ocultar");
     h3.classList.add("ocultar");
     parrafo.classList.add("ocultar");
+}
+function mostrarElementos(){
+    munieco.classList.remove("ocultar");
+    h3.classList.remove("ocultar");
+    parrafo.classList.remove("ocultar");
 }
 
 
