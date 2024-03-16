@@ -35,7 +35,13 @@ section {
 .area::placeholder{
     color: #0A3871;
 }
-
+.titulo{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color:#0A3871;
+  
+}
 .area {
     width: 70%;
     height: 70%;
