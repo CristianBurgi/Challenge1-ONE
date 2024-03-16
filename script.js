@@ -70,9 +70,14 @@ function ocultarElementos(){
 }
 */
 function encriptarTexto(mensaje) {
-    var texto = mensaje;
+    var texto = mensaje.trim();
     var textoFinal = "";
-    var hasAccent = true;
+    
+
+    if (!texto || texto.trim() === "") {
+        window.alert("Por favor, ingresa un mensaje.");
+        return null;
+    }
     for (var i = 0; i < texto.length; i++) {
         var char = texto[i];
 
@@ -100,6 +105,7 @@ function encriptarTexto(mensaje) {
         }
     }
 
+    
     return textoFinal;
 }
 
