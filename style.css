@@ -30,18 +30,21 @@ section {
 
 .seccion1 {
     width: 70%;
-    
+
 }
-.area::placeholder{
+
+.area::placeholder {
     color: #0A3871;
 }
-.titulo{
+
+.titulo {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
-    color:#0A3871;
-  
+    color: #0A3871;
+
 }
+
 .area {
     width: 70%;
     height: 70%;
@@ -52,10 +55,10 @@ section {
     font-size: 25px;
     color: #0A3871;
     border: #0A3871 solid thin;
-    outline:none;
+    outline: none;
     background-color: #f1f1f1;
     text-align: center;
-    
+
 }
 
 .anotacion {
@@ -100,38 +103,42 @@ section {
 .btn-desencriptar,
 .btn-limpiar {
     width: 150px;
-    height: 30%;  
+    height: 30%;
     padding: 24px;
     border-radius: 24px;
     gap: 8px;
 }
-.limpiar{
+
+.limpiar {
     text-align: center;
 }
-.btn-limpiar{
-   font-size: larger;
-   color: blue;
+
+.btn-limpiar {
+    font-size: larger;
+    color: blue;
     background-color: aqua;
     border-color: #0A3871;
-    
+
 }
+
 .btn-limpiar:hover {
     background-color: aquamarine;
     animation-timing-function: ease-out;
     animation-duration: 300ms;
 }
 
-.seccion2 {  
+.seccion2 {
     background-color: #ffffff;
-    width: 30%; 
+    width: 30%;
     border-radius: 32px;
     height: 80%;
     box-sizing: border-box;
-    overflow: hidden; 
+    overflow: hidden;
     margin-right: 30px;
 }
-.seccion2:hover{
-    box-shadow: 0 5px 35px 0px rgba(0,0,0,.2);   
+
+.seccion2:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .2);
 }
 
 .contenedor-munieco {
@@ -140,7 +147,7 @@ section {
     padding-top: 12em;
     box-sizing: border-box;
     overflow: hidden;
-  
+
 }
 
 .contenedor-h3 {
@@ -199,4 +206,31 @@ footer {
 
 .ocultar {
     display: none;
+}
+
+@media screen and (max-width: 480px) {
+  
+    main{
+        display: block;
+    }
+    .titulo {   
+        font-size: 1.5em;
+    }
+    .seccion1{
+        width: 80%;
+        height: 80%;
+        margin-left: 50PX;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .seccion2{
+        width: 55%;
+        height: 80%;
+        margin-left: 100PX;
+        margin-top: 30px;
+        text-align: center;
+}
+footer{
+    text-justify: auto;
+    position:fixed;
 }
